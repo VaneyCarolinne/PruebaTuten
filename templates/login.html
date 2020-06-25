@@ -1,0 +1,79 @@
+<div class="col-md-15">
+  <ul style="list-style-type: none; margin: 0; padding: 0; width: 20%;
+  margin-top: 1%;
+  background-color: #ffe066; border-radius: 15px 50px 30px;
+  height: 100%; position: fixed; overflow: auto; ">
+    <br><br>
+    <h3 style="margin-left: 5%;">{{userName}}</h3>
+    <br>
+    <li ><a href="/" style="display: block; margin-left: 5%; color: #50514f;
+      width: 190px;">Cerrar Sesión</a></li>
+
+  </ul>
+
+  <br>
+  <br>
+  <br>
+  <div style="background-color: #247ba0; margin-left: 25%; margin-right: 5%; border-radius: 15px 50px;" >
+    <br>
+      <form class="col-sm-12 form-inline" align="right">
+
+        <input type="text" ng-model="bookingId" class="form-control col-sm-2"   placeholder="BookingId">
+        &nbsp;&nbsp;&nbsp;
+        <input type="text" ng-model="bookingPrice" class="form-control col-sm-2"   placeholder="BookingPrice">
+        &nbsp;&nbsp;&nbsp;
+
+        <button type="submit" class="btn btn-dark " ng-click="search()">Filtrar</button>
+        &nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-light" ng-click="reset()">Resetear</button>
+      </form>
+    <br>
+  </div>
+  <br>
+  <div style="margin-left: 25%; margin-right: 5%; background-color: #70c1b3;  border-radius: 15px 50px;">
+    <br>
+    <table style="margin-left: 5%; width: auto; margin-right: 5%;" class="w3-table w3-bordered" id="MyTable">
+
+      <tr>
+
+        <td>BookingId</td>
+
+        <td>Cliente</td>
+
+        <td>Fecha de Creación</td>
+
+        <td>Dirección</td>
+
+        <td>Precio</td>
+
+      </tr>
+
+      <!-- <div ng-repeat="user in userAdmin"> -->
+        <!-- <div ng-repeat="f1 in f.paralelos"> -->
+
+            <tr ng-repeat="user in userAdmin">
+
+                <td>{{user.bookingId}}</td>
+
+                <td>{{user.tutenUserClient['firstName']}} - {{user.tutenUserClient['lastName']}}</td>
+
+                <td>{{user.bookingTime}}</td>
+
+                <td style="width: 19%;">{{user.parentBooking['locationId'].streetAddress}}</td>
+
+                <td>{{user.bookingPrice}}</td>
+
+              </tr>
+
+
+        <!-- </div> -->
+      <!-- </div> -->
+    </table>
+    <br><br>
+    <!-- {{userAdmin}} -->
+  </div>
+
+</>
+
+
+

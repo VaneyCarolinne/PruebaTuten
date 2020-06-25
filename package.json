@@ -1,0 +1,27 @@
+{
+  "name": "prueba",
+  "version": "1.0.0",
+  "description": "AngularJS",
+  "main": "angular-route.min.js",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VaneyCarolinne/PruebaTuten.git"
+  },
+  "author": "Vaney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VaneyCarolinne/PruebaTuten/issues"
+  },
+  "homepage": "https://github.com/VaneyCarolinne/PruebaTuten#readme",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9",
+    "lite-server": "^2.5.4",
+    "server-lite": "^2.0.0"
+  }
+}
