@@ -83,13 +83,43 @@ public class testapiController {
       Map data = new HashMap();
 
       if(Min > 59){
-        Hour++;
-        Min = 0;
+        if(Hour+1 > 23)
+          Hour = 0;
+        else
+          Hour++;
+        if(Min == 60){
+          Min = 0;
+        }else{
+          Min = Min - 59;
+        }
+
       }
 
-      String time = String.valueOf(Hour+timeZone)+":"+String.valueOf(Min)+":"+String.valueOf(Sec);
+      if(Hour+timeZone > 23){
+        if(Hour+timeZone == 24){
+          Hour = 0;
+        }else{
+          Hour=Hour+timeZone-23;
+        }
+      }else{
+        Hour=Hour+timeZone;
+      }
+
+      if(Hour < 0){
+        Hour=Hour*-1;
+      }
+
+      String HourString = "";
+
+      if(Hour >= 0 && Hour < 10){
+        HourString = "0"+String.valueOf(Hour);
+      }else{
+        HourString = String.valueOf(Hour);
+      }
+
+      String time = HourString+":"+String.valueOf(Min)+":"+String.valueOf(Sec);
       if(Min == 0){
-        time = String.valueOf(Hour+timeZone)+":"+String.valueOf(Min)+"0"+":"+String.valueOf(Sec);
+        time = HourString+":"+String.valueOf(Min)+"0"+":"+String.valueOf(Sec);
       }
 
 
