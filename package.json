@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/VaneyCarolinne/PruebaTuten#readme",
   "dependencies": {
-    "angular": "^1.6.9",
+    "angular": "^1.8.0",
     "angular-route": "^1.6.9",
     "lite-server": "^2.5.4",
     "server-lite": "^2.0.0"
