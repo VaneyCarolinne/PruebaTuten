@@ -1,11 +1,14 @@
 package problema2.pruebaapp.domain;
 
+import javax.persistence.Id;
+
 import javax.persistence.Entity;
 
 
 @Entity
 public class testapi {
 
+  @Id
   private Integer id;
   private String dato1;
   private String dato2;
